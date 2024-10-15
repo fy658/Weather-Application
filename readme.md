@@ -32,7 +32,7 @@ It consists of a React frontend and a Flask backend API.
 1. Clone the repository:
    ```
    git clone https://github.com/fy658/Weather-Application.git
-   cd weatherApplication
+   cd Weather-Application
    ```
 
 2. Create a virtual environment and activate it:
