@@ -1,0 +1,92 @@
+# Weather Application
+
+This project is a full-stack weather application that allows users to search for weather information of Chinese cities. 
+It consists of a React frontend and a Flask backend API.
+
+## Table of Contents
+
+1. [Features](#features)
+2. [Prerequisites](#prerequisites)
+3. [Backend Setup](#backend-setup)
+4. [Frontend Setup](#frontend-setup)
+5. [Running the Application](#running-the-application)
+6. [API Documentation](#api-documentation)
+
+## Features
+
+- Search weather information by city name
+- Display of temperature, humidity, wind speed, and weather description
+- User-friendly web interface
+- RESTful API with Swagger documentation
+- HTTPS support for secure communication
+
+## Prerequisites
+
+- Python 3.9.0
+- Node.js 19.9.0
+- npm 9.6.3
+- OpenWeatherMap API key
+
+## Backend Setup
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/fy658/Weather-Application.git
+   cd weatherApplication
+   ```
+
+2. Create a virtual environment and activate it:
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+
+3. Install the required packages:
+   ```
+   pip install -r requirements.txt
+   ```
+
+4. Create a `.env` file in the backend directory and add your OpenWeatherMap API key:
+   ```
+   OPENWEATHERMAP_API_KEY=your_api_key_here
+   ```
+
+5. Generate SSL certificate for HTTPS (optional for development):
+   ```
+   python generate_cert.py
+   ```
+
+## Frontend Setup
+
+1. Navigate to the frontend directory:
+   ```
+   cd frontend
+   ```
+
+2. Install the required packages:
+   ```
+   npm install
+   ```
+
+
+
+## Running the Application
+
+1. Start the backend server:
+   ```
+   cd backend
+   python app.py
+   ```
+
+2. In a new terminal, start the frontend development server:
+   ```
+   cd frontend
+   npm start
+   ```
+
+3. Open your browser and visit `http://localhost:3000` to use the application.
+
+## API Documentation
+
+Once the backend is running, you can access the Swagger UI documentation at `https://localhost:5000/` to explore and test the API endpoints.
+
