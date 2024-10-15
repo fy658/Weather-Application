@@ -51,9 +51,9 @@ It consists of a React frontend and a Flask backend API.
    OPENWEATHERMAP_API_KEY=your_api_key_here
    ```
 
-5. Generate SSL certificate for HTTPS (optional for development):
+5. Generate SSL certificate for HTTPS:
    ```
-   python generate_cert.py
+   openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365
    ```
 
 ## Frontend Setup
@@ -85,8 +85,12 @@ It consists of a React frontend and a Flask backend API.
    ```
 
 3. Open your browser and visit `http://localhost:3000` to use the application.
-
+4. Please fill english name for Chinese cities such as shanghai in search box, then click Search button,
+the result will display below.
+ 
 ## API Documentation
 
-Once the backend is running, you can access the Swagger UI documentation at `https://localhost:5000/` to explore and test the API endpoints.
+Once the backend is running, you can access the Swagger UI documentation at `https://localhost:5000/` to 
+explore and test the API endpoints.
+
 
