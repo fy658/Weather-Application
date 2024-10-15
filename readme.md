@@ -11,6 +11,7 @@ It consists of a React frontend and a Flask backend API.
 4. [Frontend Setup](#frontend-setup)
 5. [Running the Application](#running-the-application)
 6. [API Documentation](#api-documentation)
+7. [Run unit test ](#test)
 
 ## Features
 
@@ -46,12 +47,7 @@ It consists of a React frontend and a Flask backend API.
    pip install -r requirements.txt
    ```
 
-4. Create a `.env` file in the backend directory and add your OpenWeatherMap API key:
-   ```
-   OPENWEATHERMAP_API_KEY=your_api_key_here
-   ```
-
-5. Generate SSL certificate for HTTPS:
+4. Generate SSL certificate for HTTPS:
    ```
    openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365
    ```
@@ -72,9 +68,9 @@ It consists of a React frontend and a Flask backend API.
 
 ## Running the Application
 
-1. Start the backend server:
+1. return root directory and start the backend server:
    ```
-   cd backend
+   cd ..
    python app.py
    ```
 
@@ -94,3 +90,8 @@ Once the backend is running, you can access the Swagger UI documentation at `htt
 explore and test the API endpoints.
 
 
+## Test
+Please run the unit test in root directory.
+   ```
+   pytest test_app.py
+   ```
