@@ -23,7 +23,7 @@ weather_model = api.model('Weather', {
     'wind_speed': fields.Float(description='Wind speed in m/s')
 })
 
-OPENWEATHERMAP_API_KEY = "9b88f181ab504ad2eab4fe335df9b87f"
+OPENWEATHERMAP_API_KEY = os.getenv("OPENWEATHERMAP_API_KEY")
 OPENWEATHERMAP_API_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 
